@@ -30,6 +30,7 @@ DEALINGS IN THE SOFTWARE.
 #include "edge-impulse-sdk/dsp/numpy.hpp"
 
 #define INFERENCING_KEYWORD     "microbit"
+#define INFERENCING_KEYWORD2     "hallo"
 
 static NRF52ADCChannel *mic = NULL;
 static ContinuousAudioStreamer *streamer = NULL;
@@ -78,16 +79,27 @@ static void heard_keyword() {
     uBit.display.print(img);
 }
 
+static void heard_hallo() {
+    const char * hello ="\
+        255,000,255,000,255\n\
+        255,000,255,000,255\n\
+        255,255,255,000,255\n\
+        255,000,255,000,255\n\
+        255,000,255,000,255\n";
+    MicroBitImage img(hello);
+    uBit.display.print(img);
+}
+
 /**
  * Invoked when we hear something else
  */
 static void heard_other() {
     const char * empty_emoji ="\
-        000,000,000,000,000\n\
-        000,000,000,000,000\n\
-        000,000,255,000,000\n\
-        000,000,000,000,000\n\
-        000,000,000,000,000\n";
+        255,000,255,000,255\n\
+        255,000,255,000,255\n\
+        255,255,255,000,255\n\
+        255,000,255,000,255\n\
+        255,000,255,000,255\n";
     MicroBitImage img(empty_emoji);
     uBit.display.print(img);
 }
