@@ -77,6 +77,30 @@ static void heard_keyword() {
         000,000,000,000,000\n";
     MicroBitImage img(happy_emoji);
     uBit.display.print(img);
+    const char * happy_emoji ="\
+        000,255,000,255,000\n\
+        000,000,000,000,000\n\
+        255,000,000,000,255\n\
+        255,255,255,255,255\n\
+        000,000,000,000,000\n";
+    MicroBitImage img(happy_emoji);
+    uBit.display.print(img);
+    const char * happy_emoji ="\
+        000,255,000,255,000\n\
+        255,000,000,000,255\n\
+        255,000,000,000,255\n\
+        255,255,255,255,255\n\
+        000,000,000,000,000\n";
+    MicroBitImage img(happy_emoji);
+    uBit.display.print(img);
+    const char * happy_emoji ="\
+        255,255,255,255,255\n\
+        255,000,000,000,255\n\
+        255,000,000,000,255\n\
+        255,255,255,255,255\n\
+        000,000,000,000,000\n";
+    MicroBitImage img(happy_emoji);
+    uBit.display.print(img);
 }
 
 static void heard_hallo() {
@@ -95,11 +119,11 @@ static void heard_hallo() {
  */
 static void heard_other() {
     const char * empty_emoji ="\
-        255,000,255,000,255\n\
-        255,000,255,000,255\n\
-        255,255,255,000,255\n\
-        255,000,255,000,255\n\
-        255,000,255,000,255\n";
+        000,255,000,255,000\n\
+        000,000,000,000,000\n\
+        000,000,000,000,000\n\
+        255,255,255,255,255\n\
+        000,000,000,000,000\n";
     MicroBitImage img(empty_emoji);
     uBit.display.print(img);
 }
